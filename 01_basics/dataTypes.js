@@ -1,4 +1,5 @@
 //In JavaScript, data types are divided into two main categories: primitive types and non-primitive types (objects).
+
 //Primitive Data Types
 // 1. Number
 //Represents both integer and floating-point numbers.
@@ -34,6 +35,7 @@ console.log(y); // null
 const sym1 = Symbol('foo');
 const sym2 = Symbol('foo');
 console.log(sym1 === sym2); // false
+console.log(sym1 == sym2); // false
 
 // 7. BigInt
 //Introduced in ECMAScript 11.
@@ -75,6 +77,15 @@ console.log(today); // Outputs: current date and time
 //Represents regular expressions, which are used for pattern matching within strings.
 let re = /ab+c/;
 console.log(re.test('abbbc')); // true
+/* Regular expression patterns are enclosed within forward slashes (/).
+The pattern ab+c consists of three parts:
+Let's apply the regular expression /ab+c/ to the string 'abbbc':
+First Character 'a': The string contains the character 'a', which matches the first part of the pattern.
+
+One or More 'b's: The string contains three 'b's ('bbb'), which satisfies the b+ part of the pattern (one or more 'b's).
+
+Last Character 'c': The string ends with the character 'c', which matches the last part of the pattern.
+*/
 
 // 6. Map
 //Represents a collection of key-value pairs.
@@ -169,8 +180,8 @@ console.log(arr); // ['Orange', 'Banana', 'Cherry']
 //Implicit Type Conversion
 //JavaScript automatically converts the data type of a value to another data type.
 let num = 42;
-let str = 'The answer is ' + num;
-console.log(str); // The answer is 42
+let strs = 'The answer is ' + num;
+console.log(strs); // The answer is 42
 
 //Explicit Type Conversion
 //JavaScript provides various methods for explicitly converting a value to a specific data type.
