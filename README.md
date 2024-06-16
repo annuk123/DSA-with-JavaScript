@@ -1,5 +1,5 @@
-**Javascript Bootcamp
--we'll cover all the concept of JavaScript and build some awesome projects
+## Javascript Bootcamp
+- we'll cover all the concept of JavaScript and build some awesome projects
 
 ## Introduction
 JavaScript is a high-level, dynamic, and interpreted programming language that is a core technology of the World Wide Web, alongside HTML and CSS. This repository covers the basics of JavaScript to get you up and running quickly.
