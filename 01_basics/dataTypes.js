@@ -1,7 +1,9 @@
 //In JavaScript, data types are divided into two main categories: primitive types and non-primitive types (objects).
 
 //Primitive Data Types
+//Primitive data types are immutable, meaning they cannot be altered once they are declared.
 // 1. Number
+
 //Represents both integer and floating-point numbers.
 let num1 = 42;
 let num2 = 3.14;
@@ -128,7 +130,9 @@ let buffer = new ArrayBuffer(16);
 console.log(buffer.byteLength); // 16
 
 // 11. DataView
-//Provides a low-level interface for reading and writing multiple number types in an ArrayBuffer irrespective of the platform's endianness.
+//Provides a low-level interface for reading and writing multiple number types in an ArrayBuffer.
+
+
 let view = new DataView(buffer);
 view.setInt8(0, 42);
 console.log(view.getInt8(0)); // 42
@@ -226,7 +230,7 @@ console.log(typeof new ArrayBuffer(16)); // object
 console.log(typeof new DataView(new ArrayBuffer(16))); // object
 console.log(typeof new Int8Array(new ArrayBuffer(16))); // object
 console.log(typeof new Uint8Array(new ArrayBuffer(16))); // object
-console.log(typeof new Uint8ClampedArray(new ArrayBuffer(16))); // object
+console.log(typeof new Uint8ClampedArray(new ArrayBuffer(16))); 
 
 
 
