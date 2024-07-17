@@ -1,4 +1,5 @@
 //for Loop
+//The for loop repeats a block of code a specified number of times.
 for (let i = 0; i < 5; i++) {
     console.log(i);
 }

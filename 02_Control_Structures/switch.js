@@ -1,4 +1,5 @@
 //switch
+//The switch statement is a control structure that allows you to execute different blocks of code based on the value of a variable. It is similar to the if statement, but it provides a more concise way to handle multiple conditions.
 let day = 3;
 let dayName;
 
@@ -32,4 +33,3 @@ console.log(dayName); // Wednesday
 // Outputs: Wednesday
 // In the example above, the switch statement evaluates the value of the day variable and assigns the corresponding day name to the dayName variable. Since the value of day is 3, the output is Wednesday.
 
-// The switch statement is a powerful tool for controlling the flow of execution in JavaScript programs. It allows you to execute different blocks of code based on the value of a variable, making your programs more flexible and responsive.*/
