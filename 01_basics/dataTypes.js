@@ -31,6 +31,17 @@ console.log(x); // undefined
 let y = null;
 console.log(y); // null
 
+// In JavaScript, null is not a “reference to a non-existing object” or a “null pointer” like in some other languages.
+
+// It’s just a special value which represents “nothing”, “empty” or “value unknown”.
+
+// The code above states that age is unknown.
+
+
+// The difference between undefined and null is that undefined is a type itself (undefined) while null is an object.
+
+//…But we don’t recommend doing that. Normally, one uses null to assign an “empty” or “unknown” value to a variable, while undefined is reserved as a default initial value for unassigned things.
+
 // 6. Symbol
 //Introduced in ECMAScript 6.
 //Represents a unique and immutable primitive value and may be used as an identifier for object properties.
@@ -38,6 +49,18 @@ const sym1 = Symbol('foo');
 const sym2 = Symbol('foo');
 console.log(sym1 === sym2); // false
 console.log(sym1 == sym2); // false
+
+//So, if there’s a NaN somewhere in a mathematical expression, it propagates to the whole result (there’s only one exception to that: NaN ** 0 is 1).
+// 7. NaN
+//Represents a value that is "Not-a-Number".
+let result = 0 / 0;
+console.log(result); // NaN
+console.log(typeof result); // number
+console.log(result === NaN); // false
+console.log(isNaN(result)); // true
+console.log(Nan + 1); // NaN
+console.log(Nan ** 0); // 1
+alert( "not a number" / 2 - 1 ); // NaN
 
 // 7. BigInt
 //Introduced in ECMAScript 11.
