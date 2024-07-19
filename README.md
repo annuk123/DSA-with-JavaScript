@@ -1,4 +1,4 @@
-## Javascript Bootcamp
+## DSA With JavaScript
 we'll cover all the concept of JavaScript and build some awesome projects
 
 ## Introduction
