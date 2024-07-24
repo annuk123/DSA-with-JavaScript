@@ -151,3 +151,8 @@ console.log(number1[2]); // Output: 3
    let unique = [...new Set(duplicates)];
    console.log(unique); // Output: [1, 2, 3, 4, 5]
    
+
+
+
+
+   
