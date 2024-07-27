@@ -11,7 +11,7 @@ let str1 = 'Hello';
 let str2 = "World";
 let str3 = `Hello, ${name}!`; // Template literal
 
-// 1.2. String Object
+// 1.2. String Object ( using the String() constructor )
 let str4 = new String('Hello');
 console.log(str4); // String { 'Hello' }
 
@@ -55,13 +55,15 @@ console.log(txt7.includes('World')); // true
 
 // 3.7. indexOf()
 // The indexOf() method returns the position of the first occurrence of a specified value in a string:
-let txt8 = 'Hello World!';
-console.log(txt8.indexOf('World')); // 6
+let str = 'Hello World, Hello Universe';
+console.log(str.indexOf('Hello')); // 0
+console.log(str.indexOf('Hello', 1)); // 13
 
 // 3.8. lastIndexOf()
 // The lastIndexOf() method returns the position of the last occurrence of a specified value in a string:
-let txt9 = 'Hello World!';
-console.log(txt9.lastIndexOf('World')); // 6
+let strs = 'Hello World, Hello Universe';
+console.log(strs.lastIndexOf('Hello')); // 13
+console.log(strs.lastIndexOf('Hello', 12)); // 0
 
 // 3.9. match()
 // The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object:
@@ -101,7 +103,7 @@ console.log(txt16.substr(6, 5)); // World
 // 3.16. substring()
 // The substring() method extracts the characters from a string, between two specified indices, and returns the new sub string:
 let txt17 = 'Hello World!';
-console.log(txt17.substring(6, 11)); // World
+console.log(txt17.substring(6, 11)); // World 
 
 // 3.17. trim()
 // The trim() method removes whitespace from both sides of a string:
@@ -139,8 +141,14 @@ let txt24 = 'Hello\nWorld!';
 console.log(txt24); // Hello
 
 // 5.5. Carriage Return
+// The \r character is known as a "carriage return." It moves the cursor back to the start of the current line, without advancing to the next line.
+// This means any text that follows the \r character will overwrite the text that was before it on the same line.
 let txt25 = 'Hello\rWorld!';
 console.log(txt25); // World!
+
+// 'Hello' is the initial text.
+// '\r' moves the cursor back to the beginning of the line.
+// 'World!' overwrites the text starting from the beginning of the line.
 
 // 5.6. Horizontal Tab
 let txt26 = 'Hello\tWorld!';
@@ -149,10 +157,6 @@ console.log(txt26); // Hello	World!
 // 5.7. Backspace
 let txt27 = 'Hello\bWorld!';
 console.log(txt27); // HellWorld!
-
-// 5.8. Form Feed
-let txt28 = 'Hello\fWorld!';
-console.log(txt28); // HelloWorld!
 
 // 5.9 trimStart() / trimLeft()
 // The trimStart() method removes whitespace from the beginning of a string:
@@ -219,14 +223,49 @@ console.log(txt39.localeCompare(txt40)); // -1
 //7. String Conversion
 // JavaScript provides a variety of methods to convert other data types to strings. Here are some of the most commonly used methods:
 // 7.1. toString()
-// The toString() method converts a number to a string:
+// The toString() method converts a number to a string. It can be used with or without the new operator. The toString method is a method available on most JavaScript objects and is used to get a string representation of the object.
+
+//Syntax:
+// object.toString()
+// parameters: None.
 let num = 123;
 console.log(num.toString()); // 123
+console.log((true).toString());          // 'true'
+console.log([1, 2, 3].toString());      // '1,2,3'
+console.log({a: 1}.toString());         // '[object Object]'
+
+// Converts a wide range of data types to strings, including primitives, objects, and arrays.
+// Handles null and undefined implicitly, converting them to 'null' and 'undefined', respectively.
+//It is not available on null and undefined, so calling toString on these will throw an error.
+// null.toString(); // TypeError: Cannot read property 'toString' of null
+// undefined.toString(); // TypeError: Cannot read property 'toString' of undefined
+//Most built-in objects and user-defined objects override the default toString method to provide more meaningful string representations. For example, the Date object returns a string representation of the date and time when calling toString:
+
+let date = new Date();
+console.log(date.toString()); // Mon Jul 19 2021 16:17:35 GMT+0530 (India Standard Time)
+
+//The toString method is also used implicitly when an object is coerced to a string. For example, when an object is concatenated with a string, the toString method is called to convert the object to a string:
+
+let obj1 = { name: 'John', age: 30 };
+console.log('Name: ' + obj1); // Name: [object Object]
+
+//In this example, the object obj is coerced to a string using the toString method, which returns the string '[object Object]'. This is why the output is 'Name: [object Object]'.
 
 // 7.2. String()
-// The String() function converts a number to a string:
+// The String() function is a global function used to convert any value to a string. It can be used with or without the new operator:
+
+//Syntax:
+// String(value)
+// parameters(value): The value to convert to a string.
 let num1 = 123;
 console.log(String(num1)); // 123
+console.log(String({a: 1}));       // '[object Object]'
+console.log(String([1, 2, 3]));   // '1,2,3'
+console.log(String(null));         // 'null'
+console.log(String(undefined));    // 'undefined'
+
+// Converts a wide range of data types to strings, including primitives, objects, and arrays.
+// Handles null and undefined explicitly, converting them to 'null' and 'undefined', respectively.
 
 // 7.3. JSON.stringify()
 // The JSON.stringify() method converts a JavaScript object or value to a JSON string:
