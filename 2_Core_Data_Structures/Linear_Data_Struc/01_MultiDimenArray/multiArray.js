@@ -108,6 +108,9 @@ const hypercube = [
 // Multi-dimensional arrays are useful for representing complex data structures like matrices, grids, or cubes.
 // JavaScript does not have built-in support for multi-dimensional arrays, but you can create them using nested arrays and loops.
 
+
+
+
 //Use Cases
 // Multi-dimensional arrays are useful in a variety of applications where data is organized in a grid-like structure. Some common use cases include:
 // Matrices:
@@ -122,6 +125,9 @@ const hypercube = [
 // Multi-Level Data Structures:
 // They help in organizing complex data, such as nested structures in data analysis or simulations.
 
+
+
+
 //Operations
 // 1. Accessing Elements:
 // To access an element in a multi-dimensional array, you use multiple indices corresponding to the dimensions of the array.
@@ -130,9 +136,11 @@ const hypercube = [
 
 // let value = matrix[rowIndex][columnIndex];
 
+
 //2. Modifying Elements:
 // To modify an element, you simply assign a new value using the indices.
 // matrix[0][0] = 10; // Sets the first element in the first row to 10
+
 
 // 3. Iterating Over Elements:
 // You use nested loops to iterate through the elements of multi-dimensional arrays.
