@@ -70,7 +70,6 @@ We welcome contributions to the [DSA-with-JavaScript] project! Whether you're fi
 
    **Instructions:**
    - Implement the function `reverseString(str)` where `str` is the input string.
-   ```
 
 2. **Solution Format:**
    - **Title:** Reference to the question.
