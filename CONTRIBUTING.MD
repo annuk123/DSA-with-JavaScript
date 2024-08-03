@@ -90,19 +90,9 @@ We welcome contributions to the [DSA-with-JavaScript] project! Whether you're fi
    - The function splits the string into an array of characters, reverses the array, and then joins the characters back into a string.
 
 
-
-
-
-
-
-
-
-
-
-
 ## Reporting Issues
 
-If you find a bug or have a feature request, please report it by [opening an issue](https://github.com/your-username/your-repository-name/issues/new). Provide as much detail as possible to help us address the issue efficiently.
+If you find a bug or have a feature request, please report it by [opening an issue](https://github.com/annuk123/DSA-with-JavaScript/issues/new). Provide as much detail as possible to help us address the issue efficiently.
 
 ## Submitting a Pull Request
 
@@ -123,6 +113,6 @@ By contributing to this repository, you agree that your contributions will be li
 
 ---
 
-Thank you for contributing to [JavaScript-Practice-Questions]!
+Thank you for contributing to [DSA-with-JavaScript]!
 
 For any additional questions or guidance, feel free to reach out to the project maintainers.
