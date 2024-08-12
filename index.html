@@ -1,0 +1,64 @@
+<section className="flex flex-col overflow-y-auto">
+    <div></div>
+    <section className="flex flex-col px-6 pt-6 pb-6 gap-y-6">
+      <article className="flex flex-col flex-1 w-full dark:bg-dark-700 bg-light-100 p-3 rounded-md transition-all duration-150 ease-in-out">
+        <div className="mb-2">
+          <label className="form-label">
+            <span className="flex items-center mr-2 text-lg">💻</span>
+            Core
+          </label>
+        </div>
+        <div className="flex flex-wrap text-4xl gap-x-2 gap-y-2">
+          {skills.map((skill) => (
+            <button
+              key={skill.name}
+              className="relative flex w-auto overflow-visible group"
+              aria-label={skill.alt}
+            >
+              <div className="absolute z-40 hidden px-2 py-2 rounded-md w-28 group-hover:flex dark:bg-dark-600 bg-light-200 -bottom-12 transform -left-7">
+                <p className="mx-auto mb-0 text-xs font-semibold tracking-wide text-light-600 dark:text-white">
+                  {skill.name}
+                </p>
+              </div>
+              <skill.Icon className="w-9 h-9 text-light-400 dark:text-light-500" />
+            </button>
+          ))}
+        </div>
+      </article>
+    {/* </section> */}
+  {/* </section> */}
+
+
+      <div>
+    {renderCategory("Scripting", scriptingSkills)}
+    {renderCategory("Code Editors", codeEditors)}
+  </div>
+
+  <article className="flex flex-col flex-1 w-full dark:bg-dark-700 bg-light-100 p-3 rounded-md transition-all duration-150 ease-in-out">
+    <div className="mb-2">
+      <label className="form-label">
+        <span className="flex items-center mr-2 text-lg">💻</span>
+        Frontend
+      </label>
+    </div>
+    <div className="flex flex-wrap text-4xl gap-x-2 gap-y-2">
+      {kills.map((skill) => (
+        <button
+          key={skill.name}
+          className="relative flex w-auto overflow-visible group"
+          alt={skill.alt}
+        >
+          <div className="absolute z-40 hidden px-2 py-2 rounded-md w-28 group-hover:flex dark:bg-dark-600 bg-light-200 -bottom-12 transform -left-7">
+            <p className="mx-auto mb-0 text-xs font-semibold tracking-wide text-light-600 dark:text-white">
+              {skill.name}
+            </p>
+          </div>
+          <skill.Icon className="w-9 h-9 text-light-400 dark:text-light-500" aria-label={skill.name} />
+        </button>
+      ))}
+    </div>
+  </article>
+
+  </section>
+  </section>
+
