@@ -1,4 +1,4 @@
-// we can use backticks ` to embed variables in a string
+//We can use backticks ` to embed variables in a string
 // Example1
 let user = 'john';
 let age = 30;
@@ -19,7 +19,7 @@ let user2 = 'john'
     , message2 = `Hello, ${user2}! You are ${age2} years old.`;
 
 console.log(message2); // Hello, john! You are 30 years old.
-//all the above examples will output the same result and all are same with different ways of writing.
+//all the above examples will output the same result and all are the same with different ways of writing.
 
 //we can write multiline strings using backticks ``
 // Example
@@ -30,20 +30,20 @@ string`;
 console.log(multiline);
 
 
-// wwe can also declare two variable and copy data from one to another
+//We can also declare two variables and copy data from one to another
 // Example
 
 let hello = 'Hello, World!';
 
 let msg = hello; // Copy 'Hello, World!' to msg
 
-//now two variables hello and msg will have same value 'Hello, World!'
+//now two variables hello and msg will have the same value 'Hello, World!'
 console.log(msg); // Hello, World!
 console.log(hello); // Hello, World!
 
 
 //An assignment without use strict
-//Normallly, we need to define a variable before using it. but in the old times, it was technically possible to create a variable by a mere assignment of a value without using let, const or var. This still works, but it's considered bad practice. f we don't use "use strict", then the assignment will silently create a global variable. For example:
+//Normally, we need to define a variable before using it. but in the old times, it was technically possible to create a variable by a mere assignment of a value without using let, const or var. This still works, but it's considered bad practice. f we don't use "use strict", then the assignment will silently create a global variable. For example:
 
 // Example
 // bad practice
