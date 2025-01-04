@@ -5,21 +5,26 @@
 // You can return the answer in any order.
 
 function twoSum(nums, target) {
-    let map = new Map(); // Create a hash map
-    
+    // Create a map to store the complement and its index
+    const complementMap = new Map();
+
     for (let i = 0; i < nums.length; i++) {
-        let complement = target - nums[i];
-        
-        if (map.has(complement)) {
-            return [map.get(complement), i];
+        const complement = target - nums[i];
+
+        // Check if the complement exists in the map
+        if (complementMap.has(complement)) {
+            // Return the indices of the two numbers
+            return [complementMap.get(complement), i];
         }
-        
-        map.set(nums[i], i);
+
+        // Store the current number and its index in the map
+        complementMap.set(nums[i], i);
     }
-    
-    // Return an empty array if no solution is found (though the problem guarantees one solution)
+
+    // Return an empty array if no solution is found (though the problem guarantees a solution)
     return [];
 }
+
 
 // Time Complexity: O(n)
 //Key Concepts: Hash Map, Two Pointers
