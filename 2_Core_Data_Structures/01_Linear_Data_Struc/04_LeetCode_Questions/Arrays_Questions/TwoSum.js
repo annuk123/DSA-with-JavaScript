@@ -89,7 +89,11 @@ function twoSum(nums, target) {
 // nums[i] = 2.
 // complement = 9 - 2 = 7.
 // 7 is not in the Map.
-// Add 2 to the Map: complementMap = { 2 => 0 }.
+// Check if 7 is in the Map:
+// No, because the Map is still empty at this point.
+// Add 2 to the Map:
+// complementMap.set(2, 0); // { 2 => 0 }
+
 
 // Iteration 2 (i = 1):
 // nums[i] = 7.
