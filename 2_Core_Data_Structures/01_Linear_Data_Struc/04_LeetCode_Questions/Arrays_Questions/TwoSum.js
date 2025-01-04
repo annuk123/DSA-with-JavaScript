@@ -72,8 +72,6 @@ function twoSum(nums, target) {
 // Why?
 // In case a future number needs this value as its complement.
 
-// After processing nums[0] = 2, the Map will look like this:
-
 // 5. Default Return
 // return [];
 
