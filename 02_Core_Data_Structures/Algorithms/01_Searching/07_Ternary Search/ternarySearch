@@ -1,0 +1,39 @@
+//ternarySearch.js
+
+// Ternary Search
+function ternarySearch(arr, l, r, x) {
+    if (r >= l) {
+        let mid1 = l + Math.floor((r - l) / 3);
+        let mid2 = r - Math.floor((r - l) / 3);
+
+        if (arr[mid1] === x) {
+            return mid1;
+        }
+        if (arr[mid2] === x) {
+            return mid2;
+        }
+
+        if (x < arr[mid1]) {
+            return ternarySearch(arr, l, mid1 - 1, x);
+        } else if (x > arr[mid2]) {
+            return ternarySearch(arr, mid2 + 1, r, x);
+        } else {
+            return ternarySearch(arr, mid1 + 1, mid2 - 1, x);
+        }
+    }
+    return -1;
+}
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let l = 0;
+let r = arr.length - 1;
+let x = 5;
+let result = ternarySearch(arr, l, r, x);
+console.log(result); // 4
+
+// Time Complexity: O(log3 n)
+// Space Complexity: O(1)
+// The time complexity of the ternary search algorithm is O(log3 n) because in each iteration we are dividing the array into three parts. The space complexity of the ternary search algorithm is O(1) because we are using a constant amount of extra space.
+
+// Applications of Ternary Search
+// Ternary search is used to find an element in an array. It is a divide-and-conquer algorithm that is similar to binary search. The difference between binary search and ternary search is that in binary search, we divide the array into two parts, while in ternary search, we divide the array into three parts. Ternary search is used when the array is sorted and we need to find an element in the array. It is more efficient than binary search when the array is large and the number of elements to be searched is small. Ternary search is used in various applications such as finding the maximum or minimum value of a unimodal function, finding the roots of a polynomial equation, and finding the closest pair of points in a set of points. It is also used in computer graphics to find the intersection of a ray with a triangle or a sphere. Ternary search is a powerful algorithm that can be used to solve a wide range of problems.
